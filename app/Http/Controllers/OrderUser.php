@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Detail_orders;
+use App\Models\Trans_orders;
 use Illuminate\Http\Request;
 
 class OrderUser extends Controller
@@ -12,7 +14,11 @@ class OrderUser extends Controller
     public function index()
     {
         $title = 'Your Order';
-        return view('front.orderUser.index');
+        $customerId = session('id_customer');
+        $orders = Trans_orders::with('customer')->where('id_customer', $customerId)->get();
+        $detailOrder = Detail_orders::with('car')->whereIn('id_trans_order', $orders->pluck('id'))->get();
+        // return $orders;
+        return view('front.orderUser.index', compact('title', 'orders', 'detailOrder'));
     }
 
     /**

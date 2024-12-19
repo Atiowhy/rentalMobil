@@ -2,9 +2,7 @@
 
 @section('content')
     <div class="mt-3">
-        <div class="btn-cta d-flex mb-3 justify-content-end">
-            <a href="{{ route('user.create') }}" class="btn btn-primary">Tambah User</a>
-        </div>
+
         <div class="table table-responsive">
             <table class="table table-bordered table-stripped">
                 <thead class="bg-info">

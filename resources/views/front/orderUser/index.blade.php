@@ -69,7 +69,52 @@
 
     <section class="ftco-section bg-light">
 
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table table-responsive">
+                                <table class="table table-bordered table-stripped">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>No</th>
+                                            <th>Kode Transaksi</th>
+                                            <th>Nama Customer</th>
+                                            <th>Tanggal Transaksi</th>
+                                            <th>Total Harga</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($orders as $key => $order)
+                                            <tr class="text-center">
+                                                <td>{{ $key + 1 }}</td>
+                                                <td>{{ $order->trans_code }}</td>
+                                                <td>{{ $order->customer->customer_name }}</td>
+                                                <td>{{ $order->trans_date }}</td>
+                                                <td>{{ $order->total_amount }}</td>
+                                                <td>
+                                                    @if ($order->status == 0)
+                                                        <span class="btn btn-warning">Sedang Rental</span>
+                                                    @elseif ($order->status == 1)
+                                                        <span class="btn btn-success">Sudah Dikembalikan</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="" class="btn btn-primary">Detail</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 

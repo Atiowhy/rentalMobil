@@ -344,16 +344,16 @@
             let newRow = ""
             newRow += "<tr>"
             newRow += "<td class='p-3'>" + carName +
-                "<input type='text' name='id_car[]' class='id_car form-control' value='" + id_car +
+                "<input type='hidden' name='id_car[]' class='id_car form-control' value='" + id_car +
                 "' /></td>"
             newRow += "<td class='p-3'>" + price +
-                "<input type='text' name='price[]' class='price form-control' value='" + price +
+                "<input type='hidden' name='price[]' class='price form-control' value='" + price +
                 "' /></td>"
             newRow += "<td class='p-3'>" + qty +
-                "<input type='text' class='form-control' name='qty[]' id='qty' value='" + qty +
+                "<input type='hidden' class='form-control' name='qty[]' id='qty' value='" + qty +
                 "'/></td>"
             newRow += "<td class='p-3'>" + subtotal +
-                "<input type='text' name='subtotal[]' class='subtotal form-control' value='" + subtotal +
+                "<input type='hidden' name='subtotal[]' class='subtotal form-control' value='" + subtotal +
                 "' /></td>"
             newRow += "</tr>"
 
