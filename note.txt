@@ -1,0 +1,104 @@
+todo list buat di kerjakan besok
+
+1. buat crud level
+2. buat crud user
+3. buat crud customer
+4. buat crud data mobil
+
+
+
+{{-- <form action="{{ route('car.show', $data->id) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Merk</label>
+                            <input type="text" name="merk" value="{{ $data->merk }}" class="form-control">
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Kilometer</label>
+                            <input type="text" name="mileage" value="{{ $data->mileage }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Nama Mobil</label>
+                            <input type="text" name="car_name" value="{{ $data->car_name }}" class="form-control">
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Transmisi</label>
+                            <input type="text" name="transmition" value="{{ $data->transmition }}" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Tempat Duduk</label>
+                            <input type="text" name="seats" value="{{ $data->seats }}" class="form-control">
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Bagasi</label>
+                            <input type="text" name="lugage" value="{{ $data->lugage }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Bensin</label>
+                            <input type="text" name="fuel" value="{{ $data->fuel }}" class="form-control">
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Warna</label>
+                            <input type="text" name="color" value="{{ $data->color }}" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Tahun</label>
+                            <input type="year" name="year" value="{{ $data->year }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">status</label>
+                            <input type="text" name="status" value="{{ $data->status }}" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Harga</label>
+                            <input type="text" name="price" value="{{ $data->price }}" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Fitur</label>
+                            <textarea name="feature" class="form-control" id="" cols="30" rows="10">{{ $data->feature }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Deskripsi</label>
+                            <textarea name="description" class="form-control" id="" cols="30" rows="10">{{ $data->description }}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group mb-3 mt-3">
+                            <label for="" class="form-label">Foto</label>
+                            <img src="{{ asset('images/' . $data->foto) }}" alt="mobil" width="200"
+                                class="rounded-3">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Kirim</button>
+            </form> --}}

@@ -13,7 +13,8 @@ class LevelsController extends Controller
     public function index()
     {
         $title = 'Data Level';
-        $DataLevels =  Levels::get();
+        $DataLevels =  Levels::orderBy('id', 'desc')->get();
+        // return $DataLevels;
         return view('level.index', compact('title', 'DataLevels'));
     }
 
@@ -22,7 +23,8 @@ class LevelsController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Tambah Data Level';
+        return view('level.create', compact('title'));
     }
 
     /**
@@ -30,7 +32,8 @@ class LevelsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Levels::create($request->all());
+        return redirect()->to('level');
     }
 
     /**
@@ -46,7 +49,9 @@ class LevelsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title = 'Edit Data Level';
+        $dataLevel = Levels::find($id);
+        return view('level.edit', compact('title', 'dataLevel'));
     }
 
     /**
@@ -54,7 +59,10 @@ class LevelsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = Levels::find($id);
+        $data->nama_level = $request->nama_level;
+        $data->save();
+        return redirect()->to('level');
     }
 
     /**
@@ -62,6 +70,7 @@ class LevelsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Levels::find($id)->delete();
+        return redirect()->to('level');
     }
 }

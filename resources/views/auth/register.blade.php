@@ -82,16 +82,8 @@
                                                 required>
                                             <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                                         </div>
-                                        <div class="col-12">
-                                            <label for="yourEmail" class="form-label">Level</label>
-                                            <select name="id_level" class="form-control">
-                                                <option value="">--Pilih Level--</option>
-                                                @foreach ($dataLevels as $dataLevel)
-                                                    <option value="{{ $dataLevel->id }}">{{ $dataLevel->nama_level }}
-                                                    </option>
-                                                @endforeach
-                                            </select>
-                                        </div>
+                                        <input type="hidden" name="id_level" value="0">
+                                        <input type="hidden" name="foto" value="0">
                                         <div class="col-12">
                                             <label for="yourPassword" class="form-label">Password</label>
                                             <input type="password" name="password" class="form-control"
