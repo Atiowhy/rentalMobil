@@ -32,7 +32,7 @@ Route::get('regisCustomer', [RegisCustomerController::class, 'index'])->name('re
 Route::post('actionRegisCustomer', [RegisCustomerController::class, 'regisCustomer'])->name('actionRegisCustomer');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('logoutCust', [CustomerController::class, 'logoutCust'])->name('logoutCust');
-
+    
 // route middleware
 Route::middleware(['auth'])->group(function(){
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
